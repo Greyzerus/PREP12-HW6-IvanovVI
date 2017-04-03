@@ -1,35 +1,34 @@
 #include <iostream>
+#include "src.h"
 #include "Def_int_calc.hpp"
 
-double integrable_function (const double x){
-    /*Note that func must be integrable*
-     *And continuous on chosen interval*/
-    double y;
-    y = (x*x)-20;
-    return y;
-}
 
 int main() {
     double lower, upper;
     int intervals;
 
-    std::cout << "Integrable function is in \"main.cpp\" \n"
+    std::cout << "Integrable function is in \"src.c\" \n"
+              << "Note that func must be integrable"
+              << "and continuous on chosen interval."
               << std::endl;
-    std::cout << "Enter lower limit: ";// << std::flush;
+    std::cout << "Enter lower limit: " << std::flush;
     std::cin >> lower;
-    std::cout << "Enter upper limit: ";// << std::flush;
+    std::cout << "Enter upper limit: " << std::flush;
     std::cin >> upper;
     std::cout << "Enter number of integrating intervals: " << std::flush;
     std::cin >> intervals;
 
+    double (*func)(double);
+    func = &integrable_function;
+
     Trapezoidal_Def_int_calc Trapezoidal (lower, upper, intervals);
     std::cout << "Integrating result for Trapezoidal is: "
-              << Trapezoidal.calculate(&integrable_function)
+              << Trapezoidal.calculate(func)
               << std::endl;
 
     Parabolic_Def_int_calc Parabolic (lower, upper, intervals);
     std::cout << "Integrating result for Parabolic is: "
-              << Parabolic.calculate(&integrable_function)
+              << Parabolic.calculate(func)
               << std::endl;
 
     return 0;
