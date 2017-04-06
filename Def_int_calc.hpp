@@ -2,8 +2,8 @@
 // Created by greyzerus on 02.04.17.
 //
 
-#ifndef HW6_DEFINITE_INT_CALCULATING_H
-#define HW6_DEFINITE_INT_CALCULATING_H
+#ifndef HW6_DEFINITE_INT_CALCULATING_HPP
+#define HW6_DEFINITE_INT_CALCULATING_HPP
 
 
 #include <ostream>
@@ -47,4 +47,4 @@ public:
     double calculating_method (double left, double right, double (*func)(const double));
 };
 
-#endif //HW6_DEFINITE_INT_CALCULATING_H
+#endif //HW6_DEFINITE_INT_CALCULATING_HPP
