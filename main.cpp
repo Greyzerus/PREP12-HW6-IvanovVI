@@ -18,7 +18,7 @@ int main() {
     std::cout << "Enter number of integrating intervals: " << std::flush;
     std::cin >> intervals;
 
-    double (*func)(double);
+    double (*func)(const double);
     func = &integrable_function;
 
     Trapezoidal_Def_int_calc Trapezoidal (lower, upper, intervals);
