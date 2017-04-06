@@ -15,9 +15,9 @@ int main() {
 
     std::cout << "Integrable function is in \"main.cpp\" \n"
               << std::endl;
-    std::cout << "Enter lower limit: ";// << std::flush;
+    std::cout << "Enter lower limit: ";
     std::cin >> lower;
-    std::cout << "Enter upper limit: ";// << std::flush;
+    std::cout << "Enter upper limit ";
     std::cin >> upper;
     std::cout << "Enter number of integrating intervals: " << std::flush;
     std::cin >> intervals;
